@@ -4,14 +4,31 @@ import styled from "styled-components";
 function Header() {
   return (
     <HeaderContainer>
-      <Logo className="">Logo</Logo>
+      {/* 모바일버튼 추가  */}
+      <BtnMenu>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z"
+          />
+        </svg>
+      </BtnMenu>
+
+      <Logo>
+        <img src={`assets/img/web_logo.svg`} />
+      </Logo>
       <Gnb>
-        <li>
+        {/* <li>
           <a href="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
             >
               <path
@@ -20,13 +37,13 @@ function Header() {
               />
             </svg>
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
             >
               <path
@@ -42,15 +59,28 @@ function Header() {
 }
 
 const HeaderContainer = styled.header`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.4rem;
+  background: rgba(255, 255, 255, 0.5);
 `;
 
-const Logo = styled.div``;
+const BtnMenu = styled.button`
+  padding-left: 10px;
+`;
 
-const Gnb = styled.ul``;
+const Logo = styled.div`
+  width: 150px;
+`;
+
+const Gnb = styled.ul`
+  display: flex;
+`;
 
 export default Header;
