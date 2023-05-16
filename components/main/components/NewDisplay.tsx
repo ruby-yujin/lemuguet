@@ -24,10 +24,10 @@ function NewDisplay() {
 }
 
 const Container = styled.div`
-  margin: 2rem 0;
+  margin: 2rem 1rem;
 `;
 
-const Title = styled.h2`
+export const Title = styled.h2`
   font-family: serif;
   font-size: 1.2rem;
   text-align: center;
@@ -37,11 +37,12 @@ const Title = styled.h2`
 const Wrap = styled.div`
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
 const NewItem = styled.div`
-  width: 48%;
-  gap: 0 2%;
+  width: 45%;
+  margin-bottom: 5%;
 `;
 
 const NewItemImg = styled.img``;
@@ -51,6 +52,8 @@ const Description = styled.div`
   color: #333;
   span {
     font-size: 0.7rem;
+    display: block;
+    margin-bottom: 5px;
   }
   strong {
     font-size: 1rem;

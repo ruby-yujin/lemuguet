@@ -8,7 +8,7 @@ function GlobalLayout(props: any) {
 const GlobalLayoutContainer = styled.div`
   max-width: 390px;
   height: 100%;
-  border: 1px solid #dddddd;
+
   background: #fff;
   margin: 0 auto;
 `;

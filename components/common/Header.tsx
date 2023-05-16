@@ -75,7 +75,7 @@ const BtnMenu = styled.button`
   padding-left: 10px;
 `;
 
-const Logo = styled.div`
+export const Logo = styled.div`
   width: 150px;
 `;
 

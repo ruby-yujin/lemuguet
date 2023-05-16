@@ -28,4 +28,22 @@ export const ProductList = [
     ItemSrc: "assets/img/product/n0000002/IMG_4059_polarr.jpeg",
     ItemAlt: "로빈스 목걸이",
   },
+  {
+    ItemCategory: 3,
+    ItemPersonalId: "N0000003",
+    ItemName: "로빈스 목걸이 3",
+    ItemPrice: 25200,
+    ItemDes: "222뱀줄과 기본첸이의 조화, 섹시함과 시니컬 그 사이,",
+    ItemSrc: "assets/img/product/n0000002/IMG_4059_polarr.jpeg",
+    ItemAlt: "로빈스 목걸이",
+  },
+  {
+    ItemCategory: 4,
+    ItemPersonalId: "N0000004",
+    ItemName: "아르테 목걸이",
+    ItemPrice: 24000,
+    ItemDes: "심플한 바에 귀여운 진주가 더 해진 디자인",
+    ItemSrc: "assets/img/product/n0000001/IMG_0320_polarr.jpeg",
+    ItemAlt: "아르테 목걸이",
+  },
 ];
