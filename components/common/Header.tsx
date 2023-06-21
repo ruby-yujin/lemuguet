@@ -1,11 +1,19 @@
-import React from "react";
+import Link from "next/link";
+import { useState } from "react";
 import styled from "styled-components";
+import SideNav from "./SideNav";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen((isOpen) => !isOpen);
+  };
+
   return (
     <HeaderContainer>
       {/* 모바일버튼 추가  */}
-      <BtnMenu>
+      <BtnMenu href="/" onClick={handleToggle}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -23,21 +31,6 @@ function Header() {
         <img src={`assets/img/web_logo.svg`} />
       </Logo>
       <Gnb>
-        {/* <li>
-          <a href="">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M6 22q-.825 0-1.413-.588T4 20V8q0-.825.588-1.413T6 6h2q0-1.65 1.175-2.825T12 2q1.65 0 2.825 1.175T16 6h2q.825 0 1.413.588T20 8v12q0 .825-.588 1.413T18 22H6Zm0-2h12V8h-2v2q0 .425-.288.713T15 11q-.425 0-.713-.288T14 10V8h-4v2q0 .425-.288.713T9 11q-.425 0-.713-.288T8 10V8H6v12Zm4-14h4q0-.825-.588-1.413T12 4q-.825 0-1.413.588T10 6ZM6 20V8v12Z"
-              />
-            </svg>
-          </a>
-        </li> */}
         <li>
           <a href="">
             <svg
@@ -54,6 +47,7 @@ function Header() {
           </a>
         </li>
       </Gnb>
+      {isOpen ? <SideNav handleToggle={handleToggle} /> : <></>}
     </HeaderContainer>
   );
 }
@@ -69,9 +63,12 @@ const HeaderContainer = styled.header`
   align-items: center;
   padding: 0 0.4rem;
   background: rgba(255, 255, 255, 0.5);
+  z-index: 10;
 `;
 
-const BtnMenu = styled.button`
+const BtnMenu = styled(Link)`
+  display: block;
+  border: 1px solid #fff;
   padding-left: 10px;
 `;
 

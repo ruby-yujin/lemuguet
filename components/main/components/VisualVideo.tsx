@@ -14,6 +14,8 @@ function VisualVideo() {
 }
 const Container = styled.div`
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 `;
 
 const VideoWrap = styled.div`

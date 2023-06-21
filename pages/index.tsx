@@ -5,7 +5,6 @@ import GlobalLayout from "../components/common/GlobalLayout";
 import Header from "../components/common/Header";
 import styled from "styled-components";
 import Main from "../components/main";
-import SideNav from "../components/common/SideNav";
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +17,6 @@ const Home: NextPage = () => {
       <Wrap>
         {/*Hader  */}
         <Header />
-        <SideNav />
 
         {/*Content */}
         <Main />
